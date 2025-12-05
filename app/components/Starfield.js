@@ -1,38 +1,34 @@
 "use client";
-
 import { useEffect, useState } from "react";
 
 export default function Starfield() {
-    const [mounted, setMounted] = useState(false);
+  const [stars, setStars] = useState([]);
 
-    useEffect(() => {
-        // Indicar que el componente está montado (solo en cliente)
-        setMounted(true);
-    }, []);
+  useEffect(() => {
+    const arr = Array.from({ length: 120 }).map((_, i) => ({
+      id: i,
+      top: `${Math.random() * 100}vh`,
+      left: `${Math.random() * 100}vw`,
+      opacity: Math.random(),
+      duration: `${1.5 + Math.random() * 2}s`,
+    }));
+    setStars(arr);
+  }, []);
 
-    useEffect(() => {
-        if (!mounted) return;
-
-        const layer = document.getElementById("stars-layer");
-        const totalStars = 120;
-
-        for (let i = 0; i < totalStars; i++) {
-            const star = document.createElement("div");
-            star.classList.add("star");
-            star.style.top = Math.random() * 100 + "vh";
-            star.style.left = Math.random() * 100 + "vw";
-            star.style.animationDuration = 1.5 + Math.random() * 2 + "s";
-            star.style.opacity = Math.random();
-            layer.appendChild(star);
-        }
-    }, [mounted]);
-
-    if (!mounted) return null; // 🔥 prevenir HTML en SSR
-
-    return (
+  return (
+    <div className="pointer-events-none absolute inset-0 overflow-hidden">
+      {stars.map(s => (
         <div
-            id="stars-layer"
-            className="pointer-events-none absolute inset-0 overflow-hidden"
-        ></div>
-    );
+          key={s.id}
+          className="star"
+          style={{
+            top: s.top,
+            left: s.left,
+            opacity: s.opacity,
+            animationDuration: s.duration,
+          }}
+        />
+      ))}
+    </div>
+  );
 }

@@ -1,56 +1,20 @@
+"use client";
+
 import Starfield from "./components/Starfield";
 import ThemeToggle from "./components/ThemeToggle";
-
-export const metadata = {
-  title: "El Principito — Aventura Interactiva",
-  description: "Una experiencia educativa e interactiva inspirada en El Principito.",
-  openGraph: {
-    title: "El Principito — Aventura Interactiva",
-    description: "Una experiencia educativa e interactiva inspirada en El Principito.",
-    url: "https://principito-dusky.vercel.app/",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "TextQuest — Crea, explora y juega con historias",
-      },
-    ],
-  },
-};
+import Analytics from "./components/Analytics";
 
 export default function Page() {
   return (
     <main className="relative min-h-screen text-gray-900 dark:text-gray-100 bg-gradient-to-b from-indigo-100 via-blue-100 to-yellow-50 dark:from-gray-900 dark:via-gray-800 dark:to-black overflow-x-hidden">
 
-        <style>{`
-        @keyframes twinkle {0%,100%{opacity:.2;}50%{opacity:1;}}
-        .star{position:absolute;width:3px;height:3px;background:white;border-radius:50%;animation:twinkle 2s infinite ease-in-out;}
-      `}</style>
+      <Analytics />
+      <Starfield />
 
-        <Starfield />
-
-        <script dangerouslySetInnerHTML={{
-        __html: `
-        const starContainer = document.getElementById('stars-layer');
-        if (starContainer) {
-          const totalStars = 120;
-          for (let i = 0; i < totalStars; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.top = Math.random()*100+'vh';
-            star.style.left = Math.random()*100+'vw';
-            star.style.animationDuration = 1.5+Math.random()*2+'s';
-            star.style.opacity = Math.random();
-            starContainer.appendChild(star);
-          }
-        }
-      `}}>
-      </script>
-        <header className="p-6 flex justify-between items-center max-w-6xl mx-auto">
-            <h1 className="text-2xl font-bold">El Principito</h1>
-            <ThemeToggle />
-        </header>
+      <header className="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <h1 className="text-2xl font-bold">El Principito</h1>
+        <ThemeToggle />
+      </header>
 
       <section className="relative text-center max-w-3xl mx-auto py-20">
         <h2 className="text-5xl font-bold mb-4 drop-shadow-md">Una aventura entre planetas, directamente en tu WhatsApp</h2>
@@ -140,17 +104,10 @@ export default function Page() {
       </section>
 
       <footer className="text-center py-10 opacity-70 text-sm">
-        Creado con ❤️ para una experiencia educativa y mágica por 
+        Creado con ❤️ para una experiencia educativa y mágica por
         <a href="https://mowapps.es" target="_blank" className="underline hover:text-yellow-500"> MoWApps</a>
       </footer>
 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-N8899S23"></script>
-      <script dangerouslySetInnerHTML={{__html:`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GTM-N8899S23');
-      `}} />
     </main>
   );
 }
