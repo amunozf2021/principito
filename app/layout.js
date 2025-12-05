@@ -1,6 +1,7 @@
 
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/next"
+import Starfield from "./components/Starfield";
 
 export const metadata = {
   metadataBase: new URL("https://principito-dusky.vercel.app/"),
@@ -26,6 +27,8 @@ export default function RootLayout({ children }) {
         <html lang="es" className="dark">
             <body>{children}</body>
             <Analytics/>
+
+            <Starfield />
         </html>
     );
 }
