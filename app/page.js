@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "El Principito — Aventura Interactiva",
     description: "Una experiencia educativa e interactiva inspirada en El Principito.",
-    url: "https://principito.vercel.app",
+    url: "https://principito-dusky.vercel.app/",
     images: [
       {
         url: "/og-image.png",
