@@ -79,7 +79,7 @@ export default function Page() {
         <h3 className="text-4xl font-semibold mb-4 drop-shadow-lg">Escanea y comienza tu viaje</h3>
         <p className="opacity-90 mb-6">Tu viaje por los asteroides del Principito empieza aquí.</p>
         <div className="flex justify-center mt-6">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://tu-enlace-a-la-aventura.com"
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/14173085432?text=jugar%20principito"
             className="w-52 h-52 shadow-xl rounded-2xl bg-white p-4 border-4 border-gray-900 dark:border-white"/>
         </div>
       </section>
