@@ -50,7 +50,7 @@ export default function Page() {
       `}}>
       </script>
         <header className="p-6 flex justify-between items-center max-w-6xl mx-auto">
-            <h1 className="text-2xl font-bold">El Principito</h1>
+            <h1 className="text-2xl font-bold">El Principito — Aventura Interactiva</h1>
             <ThemeToggle />
         </header>
 
