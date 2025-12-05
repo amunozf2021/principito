@@ -53,29 +53,84 @@ export default function Page() {
         </header>
 
       <section className="relative text-center max-w-3xl mx-auto py-20">
-        <h2 className="text-5xl font-bold mb-4 drop-shadow-md">Una aventura entre planetas</h2>
+        <h2 className="text-5xl font-bold mb-4 drop-shadow-md">Una aventura entre planetas, directamente en tu WhatsApp</h2>
         <p className="text-lg opacity-90">Descubre mundos diminutos, cuida una rosa, conversa con un zorro y revive la magia del Principito en formato interactivo.</p>
         <div className="mt-8">
           <a href="https://wa.me/14173085432?text=jugar%20principito" className="px-8 py-3 bg-yellow-500 text-white rounded-xl shadow-lg hover:bg-yellow-400 transition">Comenzar aventura</a>
         </div>
       </section>
+        <section className="relative bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
+            <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 p-6">
+                <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
+                    <img src="/mockup1.webp" />
+                </div>
+                <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
+                    <img src="/mockup2.webp" />
+                </div>
+                <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
+                    <img src="/mockup3.webp" />
+                </div>
+            </div>
+        </section>
 
-      <section className="relative py-24 bg-gradient-to-b from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-900">
-        <h3 className="text-center text-4xl font-bold mb-10 drop-shadow">Ilustraciones de la aventura</h3>
-        <div className="max-w-5xl mx-auto grid md:grid-cols-3 gap-10 p-6">
-          <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
-            <img src="/mockup1.webp" />
-          </div>
-          <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
-            <img src="/mockup2.webp" />
-          </div>
-          <div className="shadow-xl rounded-2xl overflow-hidden bg-white/80 dark:bg-gray-700/60 backdrop-blur">
-            <img src="/mockup3.webp" />
-          </div>
-        </div>
-      </section>
+      <section id="como-jugar" className="relative text-center max-w-3xl mx-auto py-0">
+            <div className="mb-16 p-10 rounded-3xl bg-white/70 dark:bg-gray-800/60 shadow-xl backdrop-blur border border-white/30">
+                <h2 className="text-4xl font-bold mb-6 drop-shadow-md">¿Cómo se juega?</h2>
+                <p className="text-lg opacity-90 mb-6">Una aventura interactiva donde avanzas escribiendo acciones. Aquí tienes una guía rápida sin spoilers:</p>
 
-      <section id="jugar" className="relative py-28 text-center">
+
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 mx-auto max-w-xl text-lg text-center">
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">🧭</span>
+                        <p className="opacity-90 text-sm"><strong>Moverte</strong><br/>
+                            <code>ir &lt;lugar&gt;</code>
+                        </p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">💬</span>
+                        <p className="opacity-90 text-sm"><strong>Hablar</strong><br/><code>hablar &lt;nombre&gt;</code></p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">🔍</span>
+                        <p className="opacity-90 text-sm"><strong>Explorar</strong><br/><code>mirar</code></p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">🎒</span>
+                        <p className="opacity-90 text-sm"><strong>Objetos</strong><br/><code>coger</code> / <code>usar</code></p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">📦</span>
+                        <p className="opacity-90 text-sm"><strong>Inventario</strong><br/><code>inventario</code></p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-3xl">↩️</span>
+                        <p className="opacity-90 text-sm"><strong>Volver</strong><br/><code>volver</code></p>
+                    </div>
+
+
+                    <div className="flex flex-col items-center gap-2 col-span-2 sm:col-span-3">
+                        <span className="text-3xl">🤖</span>
+                        <p className="opacity-90 text-sm"><strong>Modo IA</strong><br/><code>personaje &lt;nombre&gt;</code></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+      <section id="jugar" className="relative py-0 text-center">
         <h3 className="text-4xl font-semibold mb-4 drop-shadow-lg">Escanea y comienza tu viaje</h3>
         <p className="opacity-90 mb-6">Tu viaje por los asteroides del Principito empieza aquí.</p>
         <div className="flex justify-center mt-6">
