@@ -58,7 +58,7 @@ export default function Page() {
         <h2 className="text-5xl font-bold mb-4 drop-shadow-md">Un viaje mágico que cobra vida en tu WhatsApp</h2>
         <p className="text-lg opacity-90">Descubre mundos diminutos, cuida una rosa, conversa con un zorro y revive la magia del Principito en formato interactivo.</p>
         <div className="mt-8">
-          <a href="https://wa.me/14173085432?text=jugar%20principito" className="px-8 py-3 bg-yellow-500 text-white rounded-xl shadow-lg hover:bg-yellow-400 transition">Comenzar aventura</a>
+          <a href="https://wa.me/14484188925?text=jugar%20principito" className="px-8 py-3 bg-yellow-500 text-white rounded-xl shadow-lg hover:bg-yellow-400 transition">Comenzar aventura</a>
         </div>
       </section>
 
@@ -168,7 +168,7 @@ export default function Page() {
         <h3 className="text-4xl font-semibold mb-4 drop-shadow-lg">Escanea y comienza tu viaje</h3>
         <p className="opacity-90 mb-6">Tu viaje por los asteroides del Principito empieza aquí.</p>
         <div className="flex justify-center mt-6">
-          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/14173085432?text=jugar%20principito"
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://wa.me/14484188925?text=jugar%20principito"
             className="w-52 h-52 shadow-xl rounded-2xl bg-white p-4 border-4 border-gray-900 dark:border-white"/>
         </div>
       </section>
